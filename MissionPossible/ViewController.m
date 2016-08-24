@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)leftButton:(UIButton *)sender;
 
 @end
 
@@ -26,4 +27,10 @@
 }
 
 
+- (IBAction)leftButton:(UIButton *)sender {
+    NSInteger currentCount = [sender.currentTitle integerValue];
+    currentCount++;
+    
+    [sender setTitle:[NSString stringWithFormat:@"%@", @(currentCount)] forState:UIControlStateNormal];
+}
 @end
